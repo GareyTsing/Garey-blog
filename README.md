@@ -13,5 +13,7 @@
 9. 同样的，刚性分子的Bond stretch为RIGID_BOND，通常不包含键角、二面角等信息；
 10. gRASPA的执行命令是在模拟目录下，执行'xxx/src_clean/nvc_main.x'，xxx是gRASPA的目录。
 ### gRASPA脚本介绍
-single_gcmc_generateFile.py 用于生成gRASPA单组份模拟的输入文件，生成模拟目录结构：材料名称-分子名称-T温度值K-P压力值bar，需要将所有力场文件、分子定义、材料定义文件放在统一文件夹ff_files中。
-single_gcmc_getResults.py 用于批量获取gRASPA单组份模拟的计算结果；
+1. single_gcmc_generateFile.py 用于生成gRASPA单组份模拟的输入文件；生成模拟目录结构：材料名称-分子名称-T温度值K-P压力值bar；需要将所有力场文件、分子定义ff_files。
+2. single_gcmc_getResults.py 用于批量获取gRASPA单组份模拟的计算结果，在workdir生成csv文件。
+3. mix_gcmc_generateFile.py 用于生成gRASPA双组分组份模拟的输入文件；生成模拟目录结构：材料名称-分子1名称-分子2名称-T温度值K-P压力值bar；需要将所有力场文件、分子定义ff_files。
+4. min_gcmc_getResults.py 用于批量获取gRASPA双组分组份模拟的计算结果，子啊workdir生成csv文件。
